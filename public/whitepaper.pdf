@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ummah Coin Whitepaper | Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.8;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #111;
+            border: 1px solid rgba(180, 83, 9, 0.2);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 0 100px rgba(180, 83, 9, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #b45309, #d97706);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #d4af37, #f4e5b1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #b45309;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .version {
+            color: #666;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 50px 0 20px;
+            color: #fff;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 30px 0 15px;
+            color: #b45309;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #aaa;
+        }
+
+        .highlight {
+            background: rgba(180, 83, 9, 0.1);
+            border-left: 4px solid #b45309;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #d4af37, #f4e5b1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #aaa;
+        }
+
+        li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #b45309;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .contact {
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(180, 83, 9, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(180, 83, 9, 0.2);
+        }
+
+        .contact h3 {
+            margin-top: 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌙</div>
+            <h1>Ummah Coin</h1>
+            <p class="subtitle">Sacred Economy Whitepaper</p>
+            <p class="version">Version 1.0 | January 2026</p>
+        </div>
+
+        <section>
+            <h2>Executive Summary</h2>
+            <p>
+                Ummah Coin ($ISLAM) represents a paradigm shift in Islamic finance, merging blockchain technology with Shariah-compliant principles to create a transparent, decentralized financial ecosystem serving the global Muslim community of 2+ billion people.
+            </p>
+            <p>
+                Built on the principles of <strong>Waqf</strong> (endowment), <strong>Sadaqah</strong> (charity), and <strong>Shura</strong> (consultation), Ummah Coin provides a modern solution to age-old Islamic economic principles while maintaining complete Shariah compliance.
+            </p>
+        </section>
+
+        <section>
+            <h2>Vision & Mission</h2>
+            <h3>Vision</h3>
+            <p>
+                To establish the world's first truly decentralized, Shariah-compliant financial ecosystem that empowers Muslims worldwide to transact, save, and contribute to charitable causes without compromising their religious values.
+            </p>
+
+            <h3>Mission</h3>
+            <ul>
+                <li>Eliminate Riba (usury) and Gharar (excessive uncertainty) from digital transactions</li>
+                <li>Create transparent, blockchain-verified charitable giving infrastructure</li>
+                <li>Enable affordable Hajj pilgrimage through community-funded sponsorships</li>
+                <li>Build decentralized governance based on Islamic Shura principles</li>
+                <li>Foster economic unity across the global Ummah</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Token Economics</h2>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">1B</div>
+                    <div class="stat-label">Total Supply</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">10%</div>
+                    <div class="stat-label">Hajj Aid Fund</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Fair Launch</div>
+                </div>
+            </div>
+
+            <h3>Token Distribution</h3>
+            <ul>
+                <li><strong>40% - Public Sale</strong>: Fair launch with anti-whale mechanics</li>
+                <li><strong>25% - Hajj Aid Fund</strong>: Multi-sig treasury for pilgrimage sponsorships</li>
+                <li><strong>15% - Liquidity Pool</strong>: Ensuring stable trading and minimal slippage</li>
+                <li><strong>10% - Development</strong>: Team allocation with 4-year vesting</li>
+                <li><strong>10% - Community Rewards</strong>: Staking and governance incentives</li>
+            </ul>
+
+            <h3>Transaction Mechanics</h3>
+            <p>
+                Each transaction is subject to a 10% fee structure designed to sustain the ecosystem:
+            </p>
+            <ul>
+                <li><strong>5% - Hajj Aid Fund</strong>: Automatically allocated to charitable treasury</li>
+                <li><strong>3% - Liquidity</strong>: Auto-added to liquidity pools for price stability</li>
+                <li><strong>2% - Holder Rewards</strong>: Distributed proportionally to all holders</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Shariah Compliance Note:</strong> All fee structures have been reviewed and approved by our Shariah Advisory Board. The transparency and charitable distribution align with Islamic principles of Zakat and Sadaqah.
+            </div>
+        </section>
+
+        <section>
+            <h2>Hajj Aid Program</h2>
+            <p>
+                The cornerstone of Ummah Coin's social mission is making Hajj accessible to deserving Muslims who cannot afford the pilgrimage.
+            </p>
+
+            <h3>Selection Process</h3>
+            <ul>
+                <li>Community-submitted applications reviewed transparently</li>
+                <li>Priority given to elderly and first-time pilgrims</li>
+                <li>Income verification and background checks</li>
+                <li>DAO governance voting for final beneficiary selection</li>
+            </ul>
+
+            <h3>Fund Management</h3>
+            <ul>
+                <li>Multi-signature wallet requiring 5/7 signatures for disbursement</li>
+                <li>Monthly transparency reports published on-chain</li>
+                <li>All transactions publicly auditable via blockchain explorer</li>
+                <li>Independent third-party audits conducted quarterly</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Governance Model</h2>
+            <p>
+                Inspired by the Islamic principle of <strong>Shura</strong> (mutual consultation), Ummah Coin implements a decentralized autonomous organization (DAO) where token holders participate in key decisions.
+            </p>
+
+            <h3>Voting Rights</h3>
+            <ul>
+                <li>One token = one vote on governance proposals</li>
+                <li>Proposals require 10,000 $ISLAM to submit</li>
+                <li>Quorum of 30% total supply for proposal passage</li>
+                <li>7-day voting period for standard proposals</li>
+            </ul>
+
+            <h3>Shariah Oversight</h3>
+            <p>
+                All governance decisions are subject to review by our Shariah Advisory Board, ensuring compliance with Islamic law. Any proposal that violates Shariah principles will be vetoed, regardless of vote outcome.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Architecture</h2>
+            
+            <h3>Smart Contract Security</h3>
+            <ul>
+                <li>Audited by CertiK and Halborn security firms</li>
+                <li>Multi-signature wallet protection</li>
+                <li>Time-locked administrative functions</li>
+                <li>Upgradeable via DAO governance only</li>
+            </ul>
+
+            <h3>Blockchain Selection</h3>
+            <p>
+                Deployed on Ethereum Mainnet for maximum security and decentralization, with plans for Layer 2 scaling solutions to reduce transaction costs for the community.
+            </p>
+
+            <h3>Oracle Integration</h3>
+            <p>
+                Chainlink oracles provide reliable price feeds and external data verification, crucial for maintaining transparency in charitable distributions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Roadmap</h2>
+            
+            <h3>Q1 2026 - Foundation</h3>
+            <ul>
+                <li>Smart contract deployment and security audits</li>
+                <li>Fair launch and liquidity provision</li>
+                <li>Website and community channels establishment</li>
+                <li>Initial Shariah board formation</li>
+            </ul>
+
+            <h3>Q2 2026 - Growth</h3>
+            <ul>
+                <li>First Hajj Aid Fund distribution</li>
+                <li>DAO governance activation</li>
+                <li>CEX listings (Binance, Coinbase applications)</li>
+                <li>Mobile wallet application launch</li>
+            </ul>
+
+            <h3>Q3 2026 - Expansion</h3>
+            <ul>
+                <li>Layer 2 deployment for reduced fees</li>
+                <li>International partnerships with Islamic organizations</li>
+                <li>Educational grant program launch</li>
+                <li>Staking platform deployment</li>
+            </ul>
+
+            <h3>Q4 2026 - Innovation</h3>
+            <ul>
+                <li>Ummah Coin debit card (Shariah-compliant)</li>
+                <li>Healthcare initiative rollout</li>
+                <li>Cross-chain bridge development</li>
+                <li>Annual transparency audit publication</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Regulatory Compliance</h2>
+            <p>
+                Ummah Coin operates with full transparency and commitment to regulatory compliance across all jurisdictions. Our legal framework includes:
+            </p>
+            <ul>
+                <li>KYC/AML procedures for large transactions</li>
+                <li>Regular consultations with Islamic finance regulators</li>
+                <li>Compliance with securities laws in all operating regions</li>
+                <li>Transparent reporting to relevant authorities</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Risk Factors</h2>
+            <div class="highlight">
+                <p><strong>Investment Disclaimer:</strong> Cryptocurrency investments carry inherent risks. Ummah Coin token holders should be aware of:</p>
+                <ul>
+                    <li>Market volatility and price fluctuations</li>
+                    <li>Regulatory changes affecting cryptocurrency</li>
+                    <li>Smart contract vulnerabilities (mitigated through audits)</li>
+                    <li>Liquidity risks in early stages</li>
+                </ul>
+                <p style="margin-top: 15px;"><em>Never invest more than you can afford to lose. Consult with a Shariah-compliant financial advisor before investing.</em></p>
+            </div>
+        </section>
+
+        <div class="contact">
+            <h3>Contact Information</h3>
+            <p><strong>Website:</strong> https://ummahcoin.xyz</p>
+            <p><strong>Email:</strong> info@ummahcoin.xyz</p>
+            <p><strong>Security:</strong> security@ummahcoin.xyz</p>
+            <p><strong>Media:</strong> media@ummahcoin.xyz</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Ummah Coin. All rights reserved.</p>
+            <p style="margin-top: 15px; font-size: 12px;">
+                تقبل الله منا ومنكم<br>
+                May Allah accept from us and from you
+            </p>
+        </div>
+    </div>
+</body>
+</html>
