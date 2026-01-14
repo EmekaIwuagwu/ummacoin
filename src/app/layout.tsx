@@ -26,6 +26,14 @@ export const metadata: Metadata = {
   title: "Ummah Coin ($ISLAM) | Unite the Ummah | Transform Lives",
   description: "The world's first Shariah-compliant cryptocurrency dedicated to supporting Hajj pilgrimage for every Muslim. A transparent digital endowment for the global Ummah.",
   keywords: ["Ummah Coin", "ISLAM token", "Hajj aid", "Islamic cryptocurrency", "Shariah compliant", "Halal crypto", "Muslim community", "Hajj sponsorship", "Digital Waqf"],
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
