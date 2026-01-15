@@ -6,10 +6,10 @@ import { Menu, X, Moon, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 const navLinks = [
-    { name: "Mission", href: "#mission" },
-    { name: "Tokenomics", href: "#tokenomics" },
-    { name: "Purchase", href: "#buy" },
-    { name: "Impact", href: "#community" },
+    { name: "Mission", href: "/mission" },
+    { name: "Hajj Aid", href: "/hajj-aid" },
+    { name: "Tokenomics", href: "/tokenomics" },
+    { name: "Purchase", href: "/#buy" },
 ];
 
 export default function Header() {
@@ -32,8 +32,8 @@ export default function Header() {
             <div className="container mx-auto px-6">
                 <div
                     className={`flex items-center justify-between px-6 py-3 rounded-2xl border transition-all duration-500 ${isScrolled
-                            ? "bg-background/80 backdrop-blur-xl border-white/10 shadow-2xl"
-                            : "bg-transparent border-transparent"
+                        ? "bg-background/80 backdrop-blur-xl border-white/10 shadow-2xl"
+                        : "bg-transparent border-transparent"
                         }`}
                 >
                     <Link href="/" className="flex items-center gap-3 group">
@@ -64,9 +64,11 @@ export default function Header() {
                             <ShieldCheck size={14} />
                             Verified
                         </div>
-                        <button className="px-6 py-2.5 rounded-xl bg-secondary text-white text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg shadow-secondary/20">
-                            Launch App
-                        </button>
+                        <Link href="/join">
+                            <button className="px-6 py-2.5 rounded-xl bg-secondary text-white text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-lg shadow-secondary/20">
+                                Launch App
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Mobile Toggle */}
@@ -99,9 +101,11 @@ export default function Header() {
                                     {link.name}
                                 </Link>
                             ))}
-                            <button className="btn-primary w-full">
-                                Launch App
-                            </button>
+                            <Link href="/join" className="w-full">
+                                <button className="btn-primary w-full">
+                                    Launch App
+                                </button>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

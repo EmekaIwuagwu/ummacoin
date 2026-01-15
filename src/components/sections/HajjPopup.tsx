@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { X, Heart, Star, Send } from "lucide-react";
+import Link from "next/link";
 
 export default function HajjPopup() {
     const [isOpen, setIsOpen] = useState(false);
@@ -50,9 +51,11 @@ export default function HajjPopup() {
                             </p>
 
                             <div className="space-y-4">
-                                <button className="btn-primary w-full py-5 text-sm">
-                                    Apply Now <Send size={16} />
-                                </button>
+                                <Link href="/hajj-aid" className="block w-full">
+                                    <button className="btn-primary w-full py-5 text-sm">
+                                        Apply Now <Send size={16} />
+                                    </button>
+                                </Link>
                                 <button
                                     onClick={() => setIsOpen(false)}
                                     className="text-slate-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-colors py-2"

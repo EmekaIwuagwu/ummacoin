@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 import { BookOpen, Users, Compass, Scroll } from "lucide-react";
+import Link from "next/link";
 
 const features = [
     {
@@ -61,7 +62,9 @@ export default function About() {
                             </div>
                         </div>
 
-                        <button className="btn-outline">Learn More About Shariah Logic</button>
+                        <Link href="/security">
+                            <button className="btn-outline">Learn More About Shariah Logic</button>
+                        </Link>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

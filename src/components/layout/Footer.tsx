@@ -53,6 +53,9 @@ export default function Footer() {
                             <li>
                                 <Link href="/governance" className="text-slate-500 hover:text-white transition-colors text-sm font-medium">Governance</Link>
                             </li>
+                            <li>
+                                <Link href="/join" className="text-secondary hover:text-white transition-colors text-sm font-bold uppercase tracking-widest">Join the Movement</Link>
+                            </li>
                         </ul>
                     </div>
 

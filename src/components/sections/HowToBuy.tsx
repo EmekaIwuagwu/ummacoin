@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Wallet, CreditCard, Repeat, Star } from "lucide-react";
+import Link from "next/link";
 
 const steps = [
     {
@@ -71,12 +72,16 @@ export default function HowToBuy() {
                             Security is our highest priority. We will NEVER initiate a DM or ask for your private keys. The official contract address will be published exclusively through our verified channels and this website header.
                         </p>
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <button className="px-6 py-2 rounded-lg border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-widest hover:bg-secondary/10 transition-colors">
-                                Verify Contract
-                            </button>
-                            <button className="px-6 py-2 rounded-lg border border-emerald-500/30 text-emerald-500 text-xs font-bold uppercase tracking-widest hover:bg-emerald-500/10 transition-colors">
-                                Security Audit
-                            </button>
+                            <Link href="/contract">
+                                <button className="px-6 py-2 rounded-lg border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-widest hover:bg-secondary/10 transition-colors">
+                                    Verify Contract
+                                </button>
+                            </Link>
+                            <Link href="/security">
+                                <button className="px-6 py-2 rounded-lg border border-emerald-500/30 text-emerald-500 text-xs font-bold uppercase tracking-widest hover:bg-emerald-500/10 transition-colors">
+                                    Security Audit
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

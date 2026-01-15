@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import { Download, Moon } from "lucide-react";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export default function WhitepaperPage() {
     return (
-        <main className="min-h-screen bg-background">
+        <main className="min-h-screen bg-background pt-20">
+            <Header />
             <div className="max-w-5xl mx-auto px-6 py-20">
                 {/* Header */}
                 <motion.div
@@ -260,6 +263,7 @@ export default function WhitepaperPage() {
                     </button>
                 </div>
             </div>
+            <Footer />
         </main>
     );
 }
